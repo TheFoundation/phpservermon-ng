@@ -54,7 +54,7 @@ $sm_lang = array(
         'insert' => 'Insertar',
         'add_new' => 'Agregar nuevo',
         'update_available' => 'Hay una nueva versión ({version}) disponible en <a
- href="https://github.com/phpservermon/phpservermon/releases/latest" target="_blank"
+ href="https://github.com/TheFoundation/phpservermon-ng/releases/latest" target="_blank"
  rel="noopener">http://www.phpservermonitor.org</a>.',
         'back_to_top' => 'Volver arriba',
         'go_back' => 'Volver',

@@ -467,7 +467,7 @@ namespace {
 
         if ($add_agent) {
             curl_setopt($ch, CURLOPT_USERAGENT, psm_get_conf('user_agent', 'Mozilla/5.0 (compatible; phpservermon/' .
-                PSM_VERSION . '; +https://github.com/phpservermon/phpservermon)'));
+                PSM_VERSION . '; +https://github.com/TheFoundation/phpservermon-ng)'));
         }
 
         $result['exec'] = curl_exec($ch);

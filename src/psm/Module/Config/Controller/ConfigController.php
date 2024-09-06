@@ -235,7 +235,7 @@ class ConfigController extends AbstractController
 
         $tpl_data['user_agent'] = empty($tpl_data['user_agent']) ?
             'Mozilla/5.0 (compatible; phpservermon/' .
-            PSM_VERSION . '; +https://github.com/phpservermon/phpservermon)' : $tpl_data['user_agent'];
+            PSM_VERSION . '; +https://github.com/TheFoundation/phpservermon-ng)' : $tpl_data['user_agent'];
 
         $tpl_data['site_title'] = empty($tpl_data['site_title']) ?
             strtoupper(psm_get_lang('system', 'title')) : $tpl_data['site_title'];

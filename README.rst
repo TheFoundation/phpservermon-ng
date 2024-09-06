@@ -1,4 +1,4 @@
-PHP Server Monitor
+PHP Server Monitor NG
 ==================
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
@@ -8,6 +8,15 @@ PHP Server Monitor
    :alt: huntr
    :target: https://huntr.dev
 Version 3.6.0.beta2
+
+Forked from https://github.com/phpservermon/phpservermon 
+
+## TODO :
+
+* make php8 work
+* documentation/wiki
+* push new releas
+* docker images
 
 PHP Server Monitor is a script that checks whether your websites and servers are up and running.
 It comes with a web based user interface where you can manage your services and websites,
@@ -71,11 +80,12 @@ The following SMS gateways are currently available:
 
 Please note: for these gateways you will need an account with sufficient credits.
 
-
+* Screenshot(s)
+   [phpservmon-ng overview Screenshot](psm-ng.png)
 Download
 --------
 
-The latest version can be downloaded from https://github.com/phpservermon/phpservermon/releases.
+The latest version can be downloaded from https://github.com/TheFoundation/phpservermon-ng/releases.
 
 
 Requirements
@@ -142,4 +152,5 @@ along with PHP Server Monitor.  If not, see https://www.gnu.org/licenses/.
 Docker
 -------
 
-PHPServerMonitor is now available on Docker : https://github.com/phpservermon/docker-phpservermonitor
+PHPServerMonitor ( not NG) is available on Docker : https://github.com/phpservermon/docker-phpservermonitor
+
