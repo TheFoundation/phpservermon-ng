@@ -145,4 +145,4 @@ namespace {
     }
 
     psm_update_conf($confPrefix . 'running', 0);
-}
+
