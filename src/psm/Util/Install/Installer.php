@@ -71,6 +71,13 @@ class Installer
      * @return boolean
      * @see upgrade()
      */
+    
+    public function getDBversions()
+    {
+        $version_db = psm_get_conf('version');
+    return "VER_PSM:".PSM_VERSION." | VER_DB:".$version_db;
+    }
+    
     public function isUpgradeRequired()
     {
         $version_db = psm_get_conf('version');

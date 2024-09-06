@@ -101,7 +101,7 @@ namespace {
         $installer = new \psm\Util\Install\Installer($db);
         if ($installer->isUpgradeRequired()) {
             trigger_error(
-                "Your database is for an older version and requires an upgrade, 
+                "Your database is for an older version and requires an upgrade, ".$installer->getDBversions()."
                     <a href=\"install.php\">please click here</a> to update your database to the latest version.",
                 E_USER_ERROR
             );
