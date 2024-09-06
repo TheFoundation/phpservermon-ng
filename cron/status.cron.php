@@ -43,7 +43,6 @@ namespace {
         $data = (defined('PHP_MAJOR_VERSION') && PHP_MAJOR_VERSION >= 7) ? false : @unserialize(PSM_CRON_ALLOW);
         }
         echo "OK";
-    }
 
     $cron_timeout = PSM_CRON_TIMEOUT;
 // parse a couple of arguments
@@ -145,4 +144,4 @@ namespace {
     }
 
     psm_update_conf($confPrefix . 'running', 0);
-
+}
