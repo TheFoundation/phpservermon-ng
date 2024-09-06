@@ -38,26 +38,9 @@ namespace {
         if (!isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
             $_SERVER["HTTP_X_FORWARDED_FOR"] = "";
         }
-
         // define won't accept array before php 7.0.0
         // check if data is serialized (not needed when using php 7.0.0 and higher)
         $data = (defined('PHP_MAJOR_VERSION') && PHP_MAJOR_VERSION >= 7) ? false : @unserialize(PSM_CRON_ALLOW);
-        $allow = $data === false ? PSM_CRON_ALLOW : $data;
-
-        if (!in_array($_SERVER['REMOTE_ADDR'], $allow) && !in_array($_SERVER["HTTP_X_FORWARDED_FOR"], $allow)
-          && ! (array_key_exists ("webcron_key", $_GET) &&
-             $_GET["webcron_key"]==PSM_WEBCRON_KEY && (PSM_WEBCRON_KEY != ""))
-        ) {
-            header('HTTP/1.0 403 Forbidden');
-            die('
-        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html>
-            <head><title>403 Forbidden</title></head>
-            <body>
-                <h1>Forbidden</h1><p>IP address not allowed. See the 
-                <a href="http://docs.phpservermonitor.org/en/latest/install.html#cronjob-over-web">documentation</a> 
-                for more info.</p>
-            </body>
-        </html>');
         }
         echo "OK";
     }
