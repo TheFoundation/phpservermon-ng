@@ -189,7 +189,7 @@ $sm_lang = array(
         'website_password_description' => 'Password to access the site. The password is encrypted in the database.',
         'fieldset_monitoring' => 'Monitoring',
         'fieldset_permissions' => 'Permissions',
-        'permissions' => 'Users who can view and be notified about this server',
+        'permissions' => 'Server will be visible for the following users',
         'port' => 'Port',
         'custom_port' => 'Custom Port',
         'popular_ports' => 'Popular Ports',
@@ -437,8 +437,6 @@ $sm_lang = array(
         'test_sms' => 'An SMS will be sent to the phone number specified in your user profile.',
         'test_discord' => 'A Discord notification will be sent to the webhook specified in your user profile.',
         'test_pushover' => 'A Pushover notification will be sent to the user key/device specified in your user profile.',
-        'test_pushover' => 'A Pushover notification will be sent to the user key/device specified in your user
- profile.',
         'test_webhook' => 'A webhook notification will be sent to the given url endpoint.',
         'test_telegram' => 'A Telegram notification will be sent to the chat id specified in your user profile.',
         'test_jabber' => 'A Jabber notification will be sent to the jabber account specified in your user profile.',
@@ -480,8 +478,6 @@ $sm_lang = array(
         'off_email_subject' => 'IMPORTANT: Server \'%LABEL%\' is DOWN',
         'off_email_body' => 'Failed to connect to the following server:<br><br>Server: %LABEL%<br>IP: %IP%<br>Port: %PORT%<br>Error: %ERROR%<br>Date: %DATE%',
         'off_discord_message' => 'Failed to connect to the following server:<br><br>Server: %LABEL%<br>IP: %IP%<br>Port: %PORT%<br>Error: %ERROR%<br>Date: %DATE%',
-        'off_email_body' => 'Failed to connect to the following server:<br><br>Server: %LABEL%<br>IP: %IP%<br>Port:
- %PORT%<br>Error: %ERROR%<br>Date: %DATE%',
         'off_webhook_title' => 'Server \'%LABEL%\' is DOWN',
         'off_webhook_message' => 'Failed to connect to the following server:<br><br>Server: %LABEL%<br>IP:
  %IP%<br>Port: %PORT%<br>Error: %ERROR%<br>Date: %DATE%',
@@ -501,15 +497,22 @@ $sm_lang = array(
  %LAST_OFFLINE_DURATION%:<br><br>Server: %LABEL%<br>IP: %IP%<br>Port: %PORT%<br>Date:
  %DATE%',
         'on_pushover_title' => 'Server \'%LABEL%\' is RUNNING',
-        'on_pushover_message' => 'Server \'%LABEL%\' is running again, it was down for
- %LAST_OFFLINE_DURATION%:<br><br>Server: %LABEL%<br>IP: %IP%<br>Port: %PORT%<br>Date:
- %DATE%',
-        'on_telegram_message' => 'Server \'%LABEL%\' is running again, it was down for:
- %LAST_OFFLINE_DURATION%<br><br>Server: %LABEL%<br>IP: %IP%<br>Port: %PORT%<br>Date:
- %DATE%',
-        'on_jabber_message' => 'Server \'%LABEL%\' is running again, it was down for:
- %LAST_OFFLINE_DURATION%<br><br>Server: %LABEL%<br>IP: %IP%<br>Port: %PORT%<br>Date:
- %DATE%',
+        'on_pushover_message' => 'Server \'%LABEL%\' is running again, it was down for %LAST_OFFLINE_DURATION%:<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%',
+		'on_telegram_message' => 'Server \'%LABEL%\' is running again, it was down for %LAST_OFFLINE_DURATION%:<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%',
+	),
+	'notifications' => array(
+		'off_sms' => 'Server \'%LABEL%\' is DOWN: ip=%IP%, port=%PORT%. Error=%ERROR%',
+		'off_email_subject' => 'IMPORTANT: Server \'%LABEL%\' is DOWN',
+		'off_email_body' => "Failed to connect to the following server:<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Error: %ERROR%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%",
+		'off_pushover_title' => 'Server \'%LABEL%\' is DOWN',
+		'off_pushover_message' => "Failed to connect to the following server:<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Error: %ERROR%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%",
+		'off_telegram_message' => "Failed to connect to the following server:<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Error: %ERROR%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%",
+		'on_sms' => 'Server \'%LABEL%\' is RUNNING: ip=%IP%, port=%PORT%, it was down for %LAST_OFFLINE_DURATION%',
+		'on_email_subject' => 'IMPORTANT: Server \'%LABEL%\' is RUNNING',
+		'on_email_body' => "Server '%LABEL%' is running again, it was down for %LAST_OFFLINE_DURATION%:<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%",
+		'on_pushover_title' => 'Server \'%LABEL%\' is RUNNING',
+		'on_pushover_message' => 'Server \'%LABEL%\' is running again, it was down for %LAST_OFFLINE_DURATION%:<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%',
+		'on_telegram_message' => 'Server \'%LABEL%\' is running again, it was down for :<br/><br/>Server: %LABEL%<br/>IP: %IP%<br/>Port: %PORT%<br/>Downtime: %LAST_OFFLINE_DURATION%<br/>Date: %DATE%<br/><br/>Source: %PSM_BASE_URL%',
         'combi_off_email_message' => '<ul><li>Server: %LABEL%</li><li>IP: %IP%</li><li>Port: %PORT%</li><li>Error:
  %ERROR%</li><li>Date: %DATE%</li></ul>',
         'combi_off_discord_message' => '- Server: %LABEL%<br>- IP: %IP%<br>- Port: %PORT%<br>- Error: %ERROR%<br>-
@@ -539,18 +542,12 @@ $sm_lang = array(
         'combi_email_subject' => 'IMPORTANT: \'%UP%\' servers UP again, \'%DOWN%\' servers DOWN',
         'combi_webhook_subject' => '\'%UP%\' servers UP again, \'%DOWN%\' servers DOWN',
         'combi_pushover_subject' => '\'%UP%\' servers UP again, \'%DOWN%\' servers DOWN',
-        'combi_email_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following
- servers are up again:</b><br>%UP_SERVERS%',
-        'combi_discord_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following
- servers are up again:</b><br>%UP_SERVERS%',
-        'combi_webhook_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following
- servers are up again:</b><br>%UP_SERVERS%',
-        'combi_pushover_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following
- servers are up again:</b><br>%UP_SERVERS%',
-        'combi_telegram_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following
- servers are up again:</b><br>%UP_SERVERS%',
-        'combi_jabber_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following
- servers are up again:</b><br>%UP_SERVERS%',
+        'combi_email_message' => '<b>The following servers went down:</b><br/>%DOWN_SERVERS%<br/><b>The following servers are up again:</b><br/>%UP_SERVERS%<br/>Source: %PSM_BASE_URL%',
+        'combi_discord_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following servers are up again:</b><br>%UP_SERVERS%',
+        'combi_webhook_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following servers are up again:</b><br>%UP_SERVERS%',
+        'combi_pushover_message' => '<b>The following servers went down:</b><br/>%DOWN_SERVERS%<br/><b>The following servers are up again:</b><br/>%UP_SERVERS%<br/>Source: %PSM_BASE_URL%',
+        'combi_telegram_message' => '<b>The following servers went down:</b><br/>%DOWN_SERVERS%<br/><b>The following servers are up again:</b><br/>%UP_SERVERS%<br/>Source: %PSM_BASE_URL%',
+        'combi_jabber_message' => '<b>The following servers went down:</b><br>%DOWN_SERVERS%<br><b>The following servers are up again:</b><br>%UP_SERVERS%',
     ),
     'login' => array(
         'welcome_usermenu' => 'Welcome, %user_name%',

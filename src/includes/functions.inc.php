@@ -369,9 +369,16 @@ namespace {
         if (!$message) {
             return $message;
         }
-        $vars['date'] = date('Y-m-d H:i:s');
+//        $vars['date'] = date('Y-m-d H:i:s');
+//
+//        foreach ($vars as $k => $v) {
 
-        foreach ($vars as $k => $v) {
+	// merge the constants into the $vars so we can do a %LOOKUP% from language packs
+	$constants = get_defined_constants(true);
+
+	$allvars = array_merge($vars, $constants['user']);
+
+	foreach ($allvars as $k => $v) {
             $message = str_replace('%' . strtoupper($k) . '%', $v, $message);
         }
 
